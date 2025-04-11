@@ -1,83 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hot Wheels</title>
+  <title>Hot Wheels:</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link rel="website icon" type="png" href="logo.png">
 </head>
+
 <body>
   <div class="top-bar">
     <img src="logo.png" alt="Hot Wheels Logo" class="logo" />
     <div class="nav-buttons">
-      <button>Home</button>
-      <button>About</button>
-      <button>Cart</button>
+      <button style="color: yellow;">Home</button>
+      <button style="color: yellow;">About</button>
+      <button style="color: yellow;">Cart</button>
       <button class="shop">Shop</button>
-      <button class="signin">🔒 Sign in</button>
+      <a href="form.html"> <button class="signin">🔒 Sign in</button> </a>
     </div>
     <div class="search-box">
-      <input type="text" placeholder="What are you looking for?" />
+      <input type="text" placeholder="🔍What are you looking for?"
+        style="border-radius: 20px; border-color: yellow; background-color: rgb(112, 112, 218); color: yellow;">
     </div>
   </div>
 
   <div class="main-icons">
-    <div><img src="image.jpg" alt="Retro Cars" /><p>Retro Cars</p></div>
-    <div><img src="image.jpg" alt="Die-cast vehicles" /><p>Die-cast vehicles</p></div>
-    <div><img src="image.jpg" alt="Monster trucks" /><p>Monster trucks</p></div>
-    <div><img src="image.jpg" alt="Collector" /><p>Collector</p></div>
-    <div><img src="image.jpg" alt="Track sets" /><p>Track sets</p></div>
+    <div><img src="retro.png" alt="Retro Cars" />
+      <p style="color: yellow;">Retro Cars</p>
+    </div>
+    <div><img src="die.png" alt="Die-cast vehicles" />
+      <p style="color: yellow;">Die-cast vehicles</p>
+    </div>
+    <div><img src="monster.png" alt="Monster trucks" />
+      <p style="color: yellow;">Monster trucks</p>
+    </div>
+    <div><img src="collector.png" alt="Collector" />
+      <p style="color: yellow;">Collector</p>
+    </div>
+    <div><img src="track.png" alt="Track sets" />
+      <p style="color: yellow;">Track sets</p>
+    </div>
   </div>
-
   <div class="promo-section">
     <div class="promo">
-      <img src="image.jpg" alt="Glow Show" />
-      <p><strong>Outrageous Event</strong><br />See tour dates and cities for Hot Wheels Monster Trucks Live Glow-N-Fire!<br /><a href="#">Learn More</a></p>
+      <img src="glow.avif" alt="Glow Show" />
+      <p><strong>Outrageous Event</strong><br />See tour dates and cities for Hot Wheels Monster Trucks Live
+        Glow-N-Fire!<br /><a href="#">Learn More</a></p>
     </div>
     <div class="promo">
-      <img src="image.jpg" alt="Formula 1" />
-      <p><strong>Hot Wheels & Formula 1®</strong><br />Bring home all the thrills of professional racing with toys that celebrate the world’s fastest cars.<br /><a href="#">Learn More</a></p>
+      <img src="i.avif" alt="Formula 1" />
+      <p><strong>Hot Wheels & Formula 1®</strong><br />Bring home all the thrills of professional racing with toys that
+        celebrate the world’s fastest cars.<br /><a href="#">Learn More</a></p>
     </div>
   </div>
+
+  <!-- hh -->
 
   <div class="explore-theme">
     <button class="explore-title">Explore by Theme</button>
     <div class="theme-buttons">
-      <button class="theme-btn red">
-        <img src="street-racers.png" alt="Street Racers" />
-        <span>Street Racers</span>
-      </button>
-      <button class="theme-btn blue">
-        <img src="nitro-machines.png" alt="Nitro Machines" />
-        <span>Nitro Machines</span>
-      </button>
-      <button class="theme-btn yellow">
-        <img src="gravity-drops.png" alt="Gravity Drops" />
-        <span>Gravity Drops</span>
-      </button>
-      <button class="theme-btn pink">
-        <img src="retro-rockets.png" alt="Retro Rockets" />
-        <span>Retro Rockets</span>
-      </button>
+
+      <!-- hh -->
+      <div>
+        <button class="theme-btn red">
+          <img src="s.png" alt="Street Racers" class="image" />
+          <span>Street Racers</span>
+        </button>
+        <p>
+        <div style="height:100px;width:100px;">
+          <img src="twin1.png" id="hoverImage" alt="Hover to Animate" style="height:200px;width:200px;">
+
+          <script>
+            const imageElement = document.getElementById('hoverImage');
+
+            // Replace these with your actual image paths
+            const frames = ['twin1.png', 'twin2.png', 'twin3.png', 'twin4.png', 'twin5.png'];
+
+            let currentFrame = 0;
+            let interval;
+
+            imageElement.addEventListener('mouseenter', () => {
+              interval = setInterval(() => {
+                currentFrame = (currentFrame + 1) % frames.length;
+                imageElement.src = frames[currentFrame];
+              }, 600); // Adjust the speed here (milliseconds per frame)
+            });
+
+            imageElement.addEventListener('mouseleave', () => {
+              clearInterval(interval);
+              imageElement.src = frames[0]; // Reset to the first image
+            });
+          </script>
+        </div>
+        </p>
+
+      </div>
+
+
+      <!-- hh -->
+
+      <div>
+
+        <button class="theme-btn blue">
+          <img src="turbo.png" alt="Nitro Machines" class="image" />
+          <span>Nitro Machines</span>
+        </button>
+
+        <p>
+        <div style="height:200px;width:200px;">
+          <img src="3car1.png" id="hoverImage2" alt="Hover to Animate"
+            style="max-width:100%; height:auto;margin-top: 40px;">
+
+          <script>
+            const imageElement2 = document.getElementById('hoverImage2');
+
+            // Replace these with your actual image paths
+            const frames2 = ['3car1.png', '3car2.png', '3car3.png', '3car5.png', '3car4.png'];
+
+            let currentFrame2 = 0;
+            let interval2;
+
+            imageElement2.addEventListener('mouseenter', () => {
+              interval2 = setInterval(() => {
+                currentFrame2 = (currentFrame2 + 1) % frames2.length;
+                imageElement2.src = frames2[currentFrame2];
+              }, 600); // Adjust the speed here (milliseconds per frame)
+            });
+
+            imageElement2.addEventListener('mouseleave', () => {
+              clearInterval(interval2);
+              imageElement2.src = frames2[0]; // Reset to the first image
+            });
+          </script>
+
+
+        </div>
+        </p>
+
+      </div>
+
+
+
+      <!-- hh -->
+
+
+
+
+
+      <div>
+        <button class="theme-btn yellow">
+          <img src="anvil.png" alt="Gravity Drops" class="image" />
+          <span>Gravity Drops</span>
+        </button>
+        <p>
+        <div style="height:200px;width:200px;">
+          <img src="2car1.png" id="hoverImage3" alt="Hover to Animate"
+            style="max-width:100%; height:auto;margin-top: 40px;">
+
+          <script>
+            const imageElement3 = document.getElementById('hoverImage3');
+
+            // Replace these with your actual image paths
+            const frames3 = ['2car1.png', '2car2.png', '2car3.png', '2car5.png', '2car4.png'];
+
+            let currentFrame3 = 0;
+            let interval3;
+
+            imageElement3.addEventListener('mouseenter', () => {
+              interval3 = setInterval(() => {
+                currentFrame3 = (currentFrame3 + 1) % frames3.length;
+                imageElement3.src = frames3[currentFrame3];
+              }, 600); // Adjust the speed here (milliseconds per frame)
+            });
+
+            imageElement3.addEventListener('mouseleave', () => {
+              clearInterval(interval3);
+              imageElement3.src = frames3[0]; // Reset to the first image
+            });
+          </script>
+
+        </div>
+        </p>
+      </div>
+
+
+
+
+
+      <!-- hh -->
+
+
+
+      <div>
+        <button class="theme-btn pink">
+          <img src="rockets.png" alt="Retro Rockets" class="image" />
+          <span>Retro Rockets</span>
+        </button>
+        <p>
+        <div style="height:100px;width:100px;">
+          <img src="4thcar_1.png" id="hoverImage1" alt="Hover to Animate" style="height:230px;width:230px;">
+
+          <script>
+            const imageElement1 = document.getElementById('hoverImage1');
+
+            // Replace these with your actual image paths
+            const frames1 = ['4thcar_1.png', '4thcar_2.png', '4thcar_3.png', '4thcar_5.png', '4thcar_4.png'];
+
+            let currentFrame1 = 0;
+            let interval1;
+
+            imageElement1.addEventListener('mouseenter', () => {
+              interval1 = setInterval(() => {
+                currentFrame1 = (currentFrame1 + 1) % frames1.length;
+                imageElement1.src = frames1[currentFrame1];
+
+              }, 600); // Adjust the speed here (milliseconds per frame)
+            });
+
+            imageElement1.addEventListener('mouseleave', () => {
+              clearInterval(interval1);
+              imageElement1.src = frames1[0]; // Reset to the first image
+            });
+          </script>
+
+        </div>
+        </p>
+      </div>
+
+      <!-- hh -->
+
     </div>
+  </div>
+  <div class="theme-gallery" style="display: flex;height: 300px;width: 300px;">
+
+      </div>
   </div>
 
   <div class="bestsellers">
     <h2>Hot Wheels Bestsellers</h2>
     <div class="products">
       <div class="product">
-        <img src="image.jpg" alt="Product 1">
+        <img src="ac.jpg" alt="Product 1">
         <p>Hot Wheels City Ultimate Garage Playset With 2 Die-Cast</p>
         <button>Buy Now</button>
       </div>
       <div class="product">
-        <img src="image.jpg" alt="Product 2">
+        <img src="action.jpg" alt="Product 2">
         <p>Hot Wheels Action 4-Loop Crash Out Track Set With Motorized Booster</p>
         <button>Buy Now</button>
       </div>
       <div class="product">
-        <img src="image.jpg" alt="Product 3">
+        <img src="download.jpg" alt="Product 3">
         <p>Hot Wheels Rapid Raceway Champion Play Set</p>
         <button>Buy Now</button>
       </div>
@@ -106,10 +281,11 @@
       <p>Terms of Sales</p>
     </div>
     <div class="socials">
-      <img src="image.jpg" alt="Instagram">
-      <img src="image.jpg" alt="Facebook">
-      <img src="image.jpg" alt="Twitter">
+      <img src="insta.png" alt="Instagram">
+      <img src="WhatsApp.png" alt="Facebook">
+      <img src="twitter.png" alt="Twitter">
     </div>
   </div>
 </body>
+
 </html>
